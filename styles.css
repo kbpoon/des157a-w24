@@ -4,6 +4,17 @@ ul {
     justify-content: center;
  }
 
+ a {
+    text-decoration: none;
+    color: #252525;
+ }
+
+ a:hover {
+    color: #576FE5;
+ }
+
+ 
+
 {
     margin: 0;
     padding: 0;
@@ -20,13 +31,46 @@ header #banner {
 #banner {
     text-align: center;
     justify-content: center;
+    font-family: 'Manrope', sans-serif;
 }
+
+#banner h1 {
+    font-weight: 800;
+    font-size: 50px;
+    color: #fffff2;
+}
+
+#banner h2 {
+    font-weight: 600;
+    color: #FFAE62;
+}
+
 body {
+    font-family: 'Manrope', sans-serif;
     justify-content: center;
     align-items: center;
     min-width: 100vh;
-    background: linear-gradient(45deg, #0e0c32, #345157 )
-    
+    background: linear-gradient(135deg,
+    hsl(240deg 38% 16%) 0%,
+    hsl(240deg 38% 7%) 20%,
+    hsl(255deg 53% 24%) 40%,
+    hsl(231deg 33% 37%) 60%,
+    hsl(207deg 30% 37%) 80%,
+    hsl(0deg 0% 15%) 100%);
+    background-size: 300% 300%;
+    animation: color 15s ease-in-out infinite;
+}
+
+@keyframes color{
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 .container {
@@ -44,7 +88,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 350px;
-    height: 450px;
+    height: 400px;
     background: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0 35px 80px rgba(0, 0,0, 0.3);
@@ -52,7 +96,7 @@ body {
  
  
  .container .card:hover {
-    height: 600px;
+    height: 650px;
  }
  
  
@@ -64,7 +108,7 @@ body {
     background: #333;
     border-radius: 12px;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.5s ease;
  }
 
  .container .card:hover .imgBx {
@@ -86,18 +130,34 @@ body {
     top: 250px;
     width: 100%;
     height: 20px;
-    overflow: hidden;
     text-align: center;
+    overflow: hidden;
     transition: 0.5s ease;
  }
 
  .container .card:hover .content {
-    top: 200px;
+    overflow: visible;
+    top: 225px;
     height: 250px;
+ }
+
+ .container .card .content ul {
+font-weight: 600;
+color: #95969B ;
+ }
+
+.container .card .content li {
+    font-weight: 600;
+    padding: 5px;
+}
+
+ .container .card .content h2 {
+    font-weight: 600;
  }
 
  .container .card:hover .content h2 {
     font-size: 1.5em;
+    color: black;
  }
 
 

@@ -78,8 +78,8 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 100px 50px;
-    padding: 100px 50px;
+    gap: 75px 50px;
+    padding: 75px 50px;
 }
 
 .container .card {
@@ -160,5 +160,16 @@ color: #95969B ;
     color: black;
  }
 
+ footer a {
+    text-align: center;
+    justify-content: center;
+    color: #fffff2;
+ }
+
+ footer {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+ }
 
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <h2>What color do you like?</h2>
+
+    <script>
+    var colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+
+    var userColor = prompt('Choose your favorite color between red, orange, yellow, green, blue, and purple').toLowerCase();
+
+    if (colorList.includes(userColor)) {
+        document.body.style.backgroundColor = userColor;
+    } else {
+    alert('sorry your color isnt on the list.');
+    document.body.style.backgroundColor = 'white';
+    }
+    </script>
+    
+</body>
+</html>

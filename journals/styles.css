@@ -85,7 +85,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 25px 50px;
+    gap: 100px 50px;
     padding: 75px 50px;
 }
 
@@ -121,7 +121,7 @@ p {
  }
 
  .container .card:hover .imgBx {
-   top: -100px;
+   top: -75px;
    box-shadow: 0 15px 45px rgba(0, 0,0, 0.3);
    justify-content: center;
  }

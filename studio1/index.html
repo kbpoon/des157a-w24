@@ -1,102 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    
+
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src =  "script.js" defer ></script>
+    <script src="script.js" defer></script>
     <title>MadLibs</title>
 </head>
+
 <body>
     <header>
         <h1>the text message...</h1>
-        
     </header>
 
     <main>
         <div class="chat">
-            <div class="greyText">
-              <div class="message">
-                <h3>fill these out to see a special message :> </h3>
-              </div>
-            </div>
-
-            <div class="myText">
-              <div class="message">
-                <form>
-                    <label for="greeting1">provide a greeting!</label><input type="text" id="greeting1" required=""> <br>
-                    <label for="name1">provide a name that's not urs</label><input type="text" id="name1" required=""><br>
-                    <label for="name2">provide a another name (not urs!)</label><input type="text" id="name2" required=""><br>
-                    <label for="place1">provide a location</label><input type="text" id="place1" required=""><br>
-                    <label for="adj1">provide an adjective</label><input type="text" id="adj1" required=""><br>
-                    <label for="noun1">provide a plural noun</label><input type="text" id="noun1" required=""><br>
-        
-                    <label for="verb1">provide a verb</label><input type="text" id="verb1" required=""><br>
-                    <label for="adverb1">provide an adverb</label><input type="text" id="adverb1" required=""><br>
-                    <label for="exclam1">provide an exclamation!!!</label><input type="text" id="exclam1" required=""><br>
-                    <label for="adj2">provide another adjective</label><input type="text" id=" adj2" required=""><br>
-                    <label for="body1">provide a body part</label><input type="text" id="body1" required=""><br>
-                    <label for="face1">provide an emoji or face :]</label><input type="text" id="face1" required=""><br>
-        
-                    <input type="submit" id="submit" value="Send">
-                </form>
-              </div> 
-            </div>
-            <!--typing out js text for later ! (will make this an overlay so it wont scroll)-->
-            <div class="greyText">
-                <div class="message">
-                  <p>hey we need to talk.</p>
+            <article id="introChat">
+                <div class="greyText">
+                    <div class="message">
+                        <p>fill these out to see a special message :> </p>
+                    </div>
                 </div>
-              </div>
-    
-              <div class="myText">
-                <div class="message">
-               <p>{$greeting1} {$name1}</p> 
-                </div> 
-              </div>
-    
-              <div class="greyText">
-                <div class="message">
-                  <p>i saw you and {$name2} together at {$place1} yesterday. did you think you could fool me?? why would you choose them over me. they have {$adj1} {$noun1} and {$verb1} {$adverb1}!</p>
+
+                <div class="myText">
+                    <div class="message">
+                        <form id="myForm">
+                            <label for="greeting1">provide a greeting!</label> <input type="text" id="greeting1"
+                                required=""> <br>
+                            <label for="name1">provide a name that's not urs</label> <input type="text" id="name1"
+                                required=""><br>
+                            <label for="name2">provide another name (not urs!)</label> <input type="text" id="name2"
+                                required=""><br>
+                            <label for="place1">provide a location</label> <input type="text" id="place1" required=""><br>
+                            <label for="adj1">provide an adjective</label> <input type="text" id="adj1" required=""><br>
+                            <label for="noun1">provide a plural noun</label> <input type="text" id="noun1" required=""><br>
+
+                            <label for="verb1">provide a verb</label> <input type="text" id="verb1" required=""><br>
+                            <label for="adverb1">provide an adverb</label> <input type="text" id="adverb1" required=""><br>
+                            <label for="exclam1">provide an exclamation!!!</label> <input type="text" id="exclam1"
+                                required=""><br>
+                            <label for="adj2">provide another adjective</label> <input type="text" id="adj2" required=""><br>
+                            <label for="body1">provide a body part</label> <input type="text" id="body1" required=""><br>
+                            <label for="face1">provide an emoji or face :]</label> <input type="text" id="face1"
+                                required=""><br>
+
+                            <input type="submit" id="submit" value="Send" class="send">
+                        </form>
+                    </div>
                 </div>
-              </div>
-            
-              <div class="myText">
-                <div class="message">
-                <p>{$exclam1}. I WOULD NEVER! I LOVE YOUR {$adj2} {$body1} TOO MUCH. </p> 
-                </div> 
-              </div>
-    
-              <div class="greyText">
-                <div class="message">
-                  <p>I DONT CARE. ITS NOT ME ITS YOU. WE ARE O-V-E-R OVER.</p>
+
+                <div class="greyText">
+                    <div class="message">
+                        <div class="container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-    
-              <div class="myText">
-                <div class="message">
-                <p>{$face1}.</p> 
-                </div> 
-              </div>
-            <!--end overlay-->
 
-          </div> 
-          
-
-       
-          
+            </article>
 
 
 
+            <article id="madlib">
+                <div class="greyText">
+                    <div class="message">
+                        <p>hey we need to talk.</p>
+                    </div>
+                </div>
 
+                <div class="myText">
+                    <div class="message">
+                        <p class="B1">${greeting1} ${name1}</p>
+                    </div>
+                </div>
 
-        
+                <div class="greyText">
+                    <div class="message">
+                        <p class="A2">i saw you and ${name2} together at ${place1} yesterday. did you think you could fool me?? why would you choose them over me. they have ${adj1} ${noun1} and ${verb1} ${adverb1}!</p>
+                    </div>
+                </div>
+
+                <div class="greyText">
+                    <div class="message">
+                        <p class="A3">WHY WOULD YOU CHOOSE THEM OVER ME?!? they have ${adj1} ${noun1} and ${verb1} ${adverb1}!</p>
+                    </div>
+                </div>
+
+                <div class="myText">
+                    <div class="message">
+                        <p class="B2">${exclam1}. I WOULD NEVER! I LOVE YOUR ${adj2} ${body1} TOO MUCH. </p>
+                    </div>
+                </div>
+
+                <div class="greyText">
+                    <div class="message">
+                        <p>I DONT CARE. ITS NOT ME ITS YOU. WE ARE O-V-E-R OVER.</p>
+                    </div>
+                </div>
+
+                <div class="myText">
+                    <div class="message">
+                        <p class="B3">${face1}.</p>
+                    </div>
+                </div>
+
+                <div class="greyText">
+                    <div class="message">
+                        <img src="images/cheater.png" alt="goodbye cheater">
+                    </div>
+                </div>
+            </article>
+
+        </div>
     </main>
-    
+
 </body>
+
 </html>

@@ -73,7 +73,7 @@ main {
   }
 
   @keyframes dotani {
-    0 {
+    0% {
       transform: translate(0, 0);
     }
     16% {
@@ -86,6 +86,7 @@ main {
       transform: translate(0, 0);
     }
   }
+  
 
   .container .dot:nth-last-child(1) {
     animation: dotani 1s 0.2s ease-in infinite;
@@ -109,7 +110,7 @@ main {
   }
   
   input .send {
-    margin: none;
+    margin: 0;
     padding: 5px;
   }
 

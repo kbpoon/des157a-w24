@@ -185,4 +185,7 @@ p {
     padding: 20px;
  }
 
-
+ .container #atz:hover {
+   width: 800px;
+   height: 925px;
+}

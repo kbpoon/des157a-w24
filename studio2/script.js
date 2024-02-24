@@ -20,7 +20,7 @@
     function moveImageToSection(sectionIndex) {
         const translation = getTranslationForSection(sectionIndex);
         
-        img.style.transition = 'transform 0.8s ease-in-out'; // Adjust the easing function
+        img.style.transition = 'transform 1.1s ease-in-out'; // Adjust the easing function
         img.style.transform = `translate(${translation.left}px, ${translation.top}px) scale(${translation.scale})`;
     }
 

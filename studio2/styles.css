@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yellowtail&display=swap');
+.archivo-black-regular {
+	font-family: "Archivo Black", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  }
 
 * {
 	box-sizing: border-box;
@@ -7,284 +11,159 @@
 }
 
 header {
-   padding: 20px;
-   padding-bottom: 50px;
+	padding: 20px;
+	padding-bottom: 50px;
 }
 
 body {
-	font-family: Arial;
-	color: #333;
-	padding:0;
-	margin:0;
-	background-color: #CBC3E3;
+	font-family: "Patrick Hand SC";
+	color: #242424;
+	padding: 0;
+	margin: 0;
+	background-color: rgb(37, 37, 37);
 }
 
 /* Left Column w/ Polaroid Images */
 main {
-	width: 40vw;
+	width: 40%;
 }
 
-article{
+article {
 	display: flex;
-	width: 40vw;
 	align-items: center;
 	justify-content: center;
 }
 
 section {
-	height: 50vh;
+	height: 30vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
+}
+h1 {
+	font-family: "Archivo Black", sans-serif;
+	font-size: 32px;
+	color: rgb(247, 195, 5);
+}
+header h2 {
+	color: #f0f0f0;
+}
+h2 {
+	font-family: "Archivo Black", sans-serif;
+	font-size: 20px;
+	align-items: left;
 }
 
-h1{
-	
-	font-size: 30px;
-}
-
-h3{
-	
+h3 {
 	font-size: 12px;
 	line-height: 1;
+	align-items: left;
+	font-family: "Archivo", sans-serif;
 }
 
 .polaroid {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0.2rem 1.2rem rgba(1,51,64,1);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin-top: 0px; /* Reduce margin-top to make polaroids closer vertically */
+	background-color: white;
+	padding: 15px;
+	border: 1px solid #ddd;
+	box-shadow: 0 0.2rem 1.2rem rgba(1, 51, 64, 1);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 0px; /* Reduce margin-top to make polaroids closer vertically */
 }
 
-.title{
+.title {
 	text-align: center;
 }
-.one {
-    transform: rotate(-20deg);
-    margin-left: -20px;
+
+/* imgBx */
+.imgBx {
+	width: 180px;
+	height: 280px; 
+	overflow: hidden;
+	padding-bottom: 10px;
+	padding-top: 10px;
 }
 
-.two {
-    transform: rotate(15deg);
-    margin-left: 20px;
+.polaroid > .imgBx img {
+	width: 100%; /* Make the image fill the .imgBx */
+	height: 100%; /* Make the image fill the .imgBx */
+	object-fit: cover;
+	transition: transform 0.35s;
+	filter: grayscale();
 }
-
-.three {
-    transform: rotate(-10deg);
-    margin-left: -15px;
-}
-.four {
-    transform: rotate(30deg);
-    margin-left: 10px;
-}
-
-
-
-.polaroid > img {
-    width: 250px;
-    height: 350px;
-    margin-top: 10px; /* Adjust margin-top for the image */
-    margin-bottom: 10px; /* Adjust margin-bottom for the image */
-    filter: grayscale(100%);
-    object-fit: cover;
-    transition: transform 0.35s;
-}
-
 
 .polaroid:hover {
 	filter: none;
 	transform: scale(1.1, 1) rotate(0deg);
-	transition: all 0.35s;
+	transition: all 0.5s ease;
 	z-index: 5;
 }
 
-.polaroid:hover img{
+.polaroid:hover .imgBx img {
 	filter: none;
 }
 
-/* Map on right column */
+/* different polaroid styles */
+
+.one {
+	transform: rotate(-20deg);
+	margin-left: -20px;
+	margin-top: 200px;
+}
+
+.two {
+	transform: rotate(64deg);
+	margin-left: 200px;
+	margin-top: 100px;
+}
+
+.three {
+	transform: rotate(-10deg);
+	margin-left: -250px;
+	margin-top: -300px;
+}
+.four {
+	transform: rotate(35deg);
+	margin-left: 150px;
+	margin-top: -350px;
+}
+.five {
+	transform: rotate(-60deg);
+	margin-left: -110px;
+	margin-top: -500px;
+}
+.six {
+	transform: rotate(10deg);
+	margin-left: 275px;
+	margin-top: -775px;
+}
+.seven {
+	transform: rotate(-25deg);
+	margin-left: -125px;
+	margin-top: -850px;
+}
+.eight {
+	transform: rotate(50deg);
+	margin-left: 150px;
+	margin-top: -1100px;
+}
+
+/* right column */
 figure {
 	display: block;
 	margin: 0;
-	width: 60vw;
+	width: 60%;
 	height: 100vh;
 	position: fixed;
 	top: 0;
 	right: 0;
 	overflow: hidden;
-    background-color: black;
+	background-color: black;
 }
 
 figure img {
 	position: absolute;
-	transition: all 3s ease;
-    
+	transition: all 4s ease;
 }
 
-
-
-.animate {
-	animation-duration: 0ms;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);
-}
-
-.enterup {
-	animation-name: enterup;
-	animation-delay: .5s;	
-}
-
-.enterdown {
-	animation-name: enterdown;
-	animation-delay: .5s;
-}
-
-.exitup {
-	animation-name: exitup;
-}
-
-.exitdown {
-	animation-name: exitdown;
-}
-
-@keyframes enterup {
-	0%{
-		top: 105%;
-	}
-	100% {
-		top: 50%;
-	}
-}
-
-@keyframes enterdown {
-	0%{
-		top: -20%;
-	}
-	100% {
-		top: 50%;
-	}
-}
-
-@keyframes exitup {
-	0%{
-		top: 50%;
-	}
-	100% {
-		top: -20%;
-	}
-}
-
-@keyframes exitdown {
-	0%{
-		top: 50%;
-	}
-	100% {
-		top: 105%;
-	}
-}
-
-
-/* Deciding where to zoom in */
-.sect1,
-.sect2,
-.sect3,
-.sect4,
-.sect5,
-.sect6,
-.sect7,
-.sect8{
-    
-}
-
-.sect1{
-	top: -1310px;
-	left: -1500px;
-    scale: 70%;
-}
-
-.sect2 {
-	top: -100px;
-	left: 220px;
-}
-
-.sect3 {
-    top: -830px;
-	left: 370px;
-}
-
-.sect4 {
-	top: -1680px;
-	left: -1800px;
-}
-
-.sect5 {
-    top: -600px;
-	left: -2070px;
-}
-
-.sect6 {
-	top: -790px;
-	left: 210px;
-}
-
-.sect7 {
-    top: 320px;
-	left: -3660px;
-}
-
-.sect8 {
-    top: -810px;
-	left: -2000px;
-}
-
-
-.fadeout {
-	animation-name: fadeout;
-	animation-duration: 2s;
-	animation-fill-mode: forwards;
-}
-
-
-@keyframes fadeout {
-	0%{
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-
-.foot {
-    padding-left: 8%;
-    padding-right: 8%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-    
-.left{
-    margin-right: auto;
-    margin-left: 0;
-}
-  
-.right {
-    display: flex;
-    flex-flow: row wrap;
-    line-height: 0;
-}
-
-.right > a {
-    text-decoration-line: none;
-    color: black;
-}
-
-.sign {
-    font-size: 20px;
-}

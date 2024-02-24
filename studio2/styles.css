@@ -50,13 +50,11 @@ header h2 {
 h2 {
 	font-family: "Archivo Black", sans-serif;
 	font-size: 20px;
-	align-items: left;
 }
 
 h3 {
 	font-size: 12px;
 	line-height: 1;
-	align-items: left;
 	font-family: "Archivo", sans-serif;
 }
 
@@ -89,11 +87,10 @@ h3 {
 	height: 100%; /* Make the image fill the .imgBx */
 	object-fit: cover;
 	transition: transform 0.35s;
-	filter: grayscale();
+	filter: grayscale(1);
 }
 
 .polaroid:hover {
-	filter: none;
 	transform: scale(1.1, 1) rotate(0deg);
 	transition: all 0.5s ease;
 	z-index: 5;

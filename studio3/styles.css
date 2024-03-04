@@ -1,0 +1,182 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: black;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 65px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+li {
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+img {
+    width: 150px
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: brown; */
+}
+
+main {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: burlywood; */
+}
+
+
+button,
+#game-control1 > a,
+#game-control2 > a {
+    width: 115px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color:#5f54d5;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: 1.5px solid #5f54d5;
+    background-color: #8294ff;
+}
+
+button>a {
+    color: #fb5cb4;
+}
+
+#container {
+    display: flex;
+    margin: 1em auto;
+    max-width: 1366px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#pig1-container {
+    margin-left: 150px;
+}
+
+#pig2-container {
+    margin-right: 150px;
+}
+
+#game-control1 {
+    display: flex;
+    align-items: center;
+ 
+}
+
+#game-play {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+
+#game,
+#actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+#game {
+    flex-direction: column;
+}
+
+#game-control2 {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+
+}
+
+#btn-container {
+    display: flex;
+}
+
+
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    z-index: 100;
+
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.overlay article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(37, 37, 37);
+    padding: 20px;
+    background-color: rgb(69, 69, 69);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay>article>h2 {
+    color: white;
+}
+
+/* animations */
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

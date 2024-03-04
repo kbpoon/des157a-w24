@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniteez Dice Battle</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>aniteez dice battle !</h1>
+        </header>
+
+        <main>
+            <section id="pig1-container">
+                <img src="images/jh.jpeg" alt="Pig 1" class="pig-image">
+                <h2>PLAYER1</h2>
+                <h2 id="pig1-score">Score:</h2>
+            </section>
+
+            <section id="game-control1">
+                <a href="#" class="open" id="one">Rules</a>
+                <button id="start-game">Start</button>
+            </section>
+            
+            <section id="game-play">
+                <section id="game"></section>
+                <section id="actions"></section>
+            </section>
+
+            <!-- overlay for rules-->
+            <section id="ol-one" class="overlay hidden">
+                <article>
+                    <h2>Game Rules:</h2>
+                    <ul>
+                        <li>There are two players.</li>
+                        <li>The player whose turn it is rolls the dice.</li>
+                        <li>
+                            The total of the roll is added to the current player's score, unless either die comes up as
+                            a "pig". If this happens, this player's turn is over, and it is the other player’s turn.
+                        </li>
+                        <li>
+                            If a player rolls two "pigs", that player's current score gets zeroed out, and
+                            they have to start over, accumulating points from zero.
+                        </li>
+                        <li>
+                            After each roll, the current player can either roll again, (assuming a "pig" was not rolled)
+                            or if the current player feels that luck is running thin, they can pass to the other player.
+                        </li>
+                        <li>The first player to get 30 points or higher wins.</li>
+                    </ul>
+                    <button class="close">Close</button>
+                </article>
+            </section>
+
+            <section id="pig2-container">
+               <img src="images/hj.jpeg" alt="Pig 2" class="pig-image">
+                <h2>PLAYER2</h2>
+                <h2 id="pig2-score">Score:</h2>
+            </section>
+        </main>
+
+        <section id="game-control2">
+            <button id="quit"><a href="#" class="open" id="two">Quit</a></button>
+            <a href="#" class="open" id="three">Rules</a>
+        </section>
+
+        <!-- overlay for quit -->
+        <section id="ol-two" class="overlay hidden">
+            <article>
+                <h2>Are you sure you want to quit?</h2>
+                <div id="btn-container">
+                    <button id="quit-yes">Yes</button>
+                    <button class="close">No</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- overlay for rules again -->
+        <section id="ol-three" class="overlay hidden">
+            <article>
+                <h2>Game Rules:</h2>
+                <ul>
+                    <li>There are two players.</li>
+                    <li>The player whose turn it is rolls the dice.</li>
+                    <li>
+                        The total of the roll is added to the current player's score, unless either die comes up as
+                        a "pig". If this happens, this player's turn is over, and it is the other player’s turn.
+                    </li>
+                    <li>
+                        If a player rolls two "pigs", that player's current score gets zeroed out, and
+                        they have to start over, accumulating points from zero.
+                    </li>
+                    <li>
+                        After each roll, the current player can either roll again, (assuming a "pig" was not rolled)
+                        or if the current player feels that luck is running thin, they can pass to the other player.
+                    </li>
+                    <li>The first player to get 30 points or higher wins.</li>
+                </ul>
+                <button class="close">Close</button>
+            </article>
+        </section>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="sources.html">Sources</a>
+            <a href="https://validator.w3.org/check?uri=https://alyssamarie0107.github.io/des157/studio3">Valid HTML5</a>
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyssamarie0107.github.io/des157/studio3/%2F">Valid CSS</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

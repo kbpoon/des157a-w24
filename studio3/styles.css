@@ -1,17 +1,48 @@
+#pig1-container,
+#pig2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px; 
+}
+
+.player-container h2 {
+    margin: 10px 0;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.score {
+    margin-top: 10px; 
+}
+
+
+
 body {
     font-family: 'Quicksand', sans-serif;
-    background-image: url('images/bg.jpg');
+    background-image: url('images/bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
+    height: 95vh;
 }
 
-h1,
+h1 {
+    color: white;
+}
+
 h2,
 h3 {
-    color: black;
-    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+
 }
 
 h1 {
@@ -31,15 +62,24 @@ li {
 }
 
 img {
-    width: 150px
+    height: 125px;
 }
 
+#mg {
+    height: 350px;
+    margin-top: -40px;
+}
+
+#san {
+    height: 300px;
+    margin-left: -20px;
+}
 header {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: brown; */
+    margin-bottom: 20px;
 }
 
 main {
@@ -47,31 +87,28 @@ main {
     height: 440px;
     display: flex;
     justify-content: space-between;
-    /* background-color: burlywood; */
 }
 
 
 button,
 #game-control1 > a,
 #game-control2 > a {
-    width: 115px;
-    height: 55px;
+    width: 200px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
     font-size: 20px;
+    font-weight: bold;
     cursor: pointer;
-    color:#5f54d5;
-    border-radius: 20px;
+    color:#ffffff;;
+    border-radius: 30px;
     text-transform: uppercase;
-    border: 1.5px solid #5f54d5;
-    background-color: #8294ff;
+    border: 3px solid #312c65;
+    background-color: #5467d4;
 }
 
-button>a {
-    color: #fb5cb4;
-}
 
 #container {
     display: flex;
@@ -81,13 +118,18 @@ button>a {
     flex-direction: column;
 }
 
+.score {
+    height: 100px;
+}
 
 #pig1-container {
     margin-left: 150px;
+    height: 500px;
 }
 
 #pig2-container {
     margin-right: 150px;
+    height: 500px;
 }
 
 #game-control1 {
@@ -112,8 +154,30 @@ button>a {
 
 }
 
+#game h2 {
+    font-size: 24px;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
 #game {
     flex-direction: column;
+    color: white;
+}
+
+#game h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border: #ffffff;
+    border-radius: 15px;
+    border-width: 4px;
 }
 
 #game-control2 {
@@ -174,9 +238,33 @@ button>a {
     color: white;
 }
 
-/* animations */
+a:visited {
+    color: #ffffff;;
+}
+
 @keyframes blinker {
     50% {
         opacity: 0;
     }
 }
+
+footer {
+    background-color: rgb(25, 19, 43);
+    padding: 20px;
+    color: #5467d4;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #5467d4;
+}
+
+footer a:visited {
+    color: #b854d4;
+}
+
+
+
+

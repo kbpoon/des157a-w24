@@ -8,13 +8,10 @@
     for(const eachOpenBtn of openBtns) {
         eachOpenBtn.addEventListener('click', function(event){
             event.preventDefault();
-
-            console.log(event.target.id);
             
             const thisBtn = event.target.id;
         
             document.querySelector(`#ol-${thisBtn}`).className = 'overlay showing';
-
         });
     }
 
@@ -45,14 +42,14 @@
     // keeping track of game data
     let gameData = {
         dice: [
-            '1die.jpg', 
-            '2die.jpg', 
-            '3die.jpg', 
-            '4die.jpg', 
-            '5die.jpg', 
-            '6die.jpg'
+            '1die.png', 
+            '2die.png', 
+            '3die.png', 
+            '4die.png', 
+            '5die.png', 
+            '6die.png'
         ],
-        players: ['pig 1', 'pig 2'],
+        players: ['player 1', 'player 2'],
         score: [0,0],
         roll1: 0,
         roll2: 0,
@@ -82,12 +79,20 @@
     });
 
     function setUpTurn() {
-        game.innerHTML = `<h2>Roll the dice for ${gameData.players[gameData.index]}</h2>`;
-        actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+        game.innerHTML = `<h2>roll the dice for ${gameData.players[gameData.index]}</h2>`;
+        actionArea.innerHTML = '<button id="roll">roll the dice!</button>';
 
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
+            const rollSound = new Audio('sounds/roll.mp3');
+            rollSound.play();
+            rollSound.volume = 0.5;
         });
+
+        // play roll dice mp3
+        const startSound = new Audio('sounds/start.mp3');
+        startSound.play();
+        startSound.volume = 0.5;
     }
 
     function throwDice() {
@@ -100,7 +105,7 @@
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
-        game.innerHTML = `<h2>Roll the dice for ${gameData.players[gameData.index]}</h2>`;
+        game.innerHTML = `<h2>roll the dice for ${gameData.players[gameData.index]}</h2>`;
         game.innerHTML += `<img src=images/${gameData.dice[gameData.roll1-1]}>
                             <img src=images/${gameData.dice[gameData.roll2-1]}>`;
 
@@ -108,14 +113,14 @@
 
         if(gameData.rollSum === 2) {
             // switch player
-            game.innerHTML += '<h3>AHHH! A SNAKE!</h3';
+            game.innerHTML += '<h3 class="message">WOMP WOMP ur dead! switching turns !!</h3>';
 
             // zero out the score
             gameData.score[gameData.index] = 0;
 
             // set up turn for the next player
             // ternary operator 
-            // evaulate whether gameData.index is true (gameData.index is either 0(false) or 1(true))
+            // evaluate whether gameData.index is true (gameData.index is either 0(false) or 1(true))
             // if it is a 1, set index to 0 and if it is a 0, set index to 1
             // could use an if else statement
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
@@ -127,19 +132,25 @@
         else if(gameData.roll1 === 1 || gameData.roll2 === 1) {
             // switch player
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<h3>sorry, you rolled a one! switching to ${gameData.players[gameData.index]}</h3>`;
+            game.innerHTML += `<h3 class="message">sorry :< you rolled a skull! switching to ${gameData.players[gameData.index]}</h3>`;
 
             // set up turn
             setTimeout(setUpTurn, 3000);
         }
         else {
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            actionArea.innerHTML = '<button id="rollagain">Roll again</button> <button id="pass">Pass</button>';
+            actionArea.innerHTML = '<button id="rollagain">roll again</button> <button id="pass">Pass</button>';
+
+            // Add padding to increase the clickable area
+            document.getElementById('rollagain').style.padding = '20px';
+            document.getElementById('pass').style.padding = '20px';
 
             document.getElementById('rollagain').addEventListener('click', function() {
                 throwDice();
-
-        
+                // play roll dice mp3
+                const rollSound = new Audio('sounds/roll.mp3');
+                rollSound.play();
+                rollSound.volume = 0.5;
             });
 
             document.getElementById('pass').addEventListener('click', function() {
@@ -156,20 +167,26 @@
     function checkWinningCondition() {
         if(gameData.score[gameData.index] > gameData.gameEnd) {
             showCurrentScore();
+            // play winning sound
+            const winSound = new Audio('sounds/win.mp3');
+            setTimeout(winSound.play(), 2000);
+            winSound.volume = 0.2;
 
-        
             game.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
             actionArea.innerHTML = '';
             
             let quitBtn = document.querySelector('#quit');
 
-            quitBtn.innerHTML = "Start a New Game";
-            quitBtn.style.animation = "blinker 1s linear infinite";
+            quitBtn.innerHTML = "new game";
+            quitBtn.style.animation = "blinker 2s linear infinite";
 
             quitBtn.addEventListener('click', function(){
                 // refreshes the page
                 location.reload();
+                const startSound = new Audio('sounds/start.mp3');
+                setTimeout(startSound.play(), 2000);
+                startSound.volume = 0.2;
             });
 
         }

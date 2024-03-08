@@ -21,10 +21,13 @@
         </header>
 
         <main>
-            <section id="pig1-container">
-                <img src="images/jh.jpeg" alt="Pig 1" class="pig-image">
-                <h2>PLAYER1</h2>
-                <h2 id="pig1-score">Score:</h2>
+            <section class="player-container" id="pig1-container">
+                <section class="score">
+                    <h2>PLAYER 1</h2>
+                    <h2 id="pig1-score">score:</h2>
+                </section>
+                <img src="images/csn.png" alt="Pig 1" class="pig-image" id="san">
+                
             </section>
 
             <section id="game-control1">
@@ -40,47 +43,48 @@
             <!-- overlay for rules-->
             <section id="ol-one" class="overlay hidden">
                 <article>
-                    <h2>Game Rules:</h2>
+                    <h2>game rules:</h2>
                     <ul>
-                        <li>There are two players.</li>
-                        <li>The player whose turn it is rolls the dice.</li>
-                        <li>
-                            The total of the roll is added to the current player's score, unless either die comes up as
-                            a "pig". If this happens, this player's turn is over, and it is the other player’s turn.
+                        <li>there are two players.</li>
+                        <li>a player will roll the dice.</li>
+                        <li>the total of the roll is added to the current player's score. 
+                            if a skull is rolled this player's turn is over, and it will switch to the other player.
                         </li>
                         <li>
-                            If a player rolls two "pigs", that player's current score gets zeroed out, and
-                            they have to start over, accumulating points from zero.
+                            if a player rolls two skulls, their current score gets zeroed out and will have to start from zero.
                         </li>
                         <li>
-                            After each roll, the current player can either roll again, (assuming a "pig" was not rolled)
-                            or if the current player feels that luck is running thin, they can pass to the other player.
+                            after each successful roll, the current player can either roll again
+                            or pass the turn to the other player.
                         </li>
-                        <li>The first player to get 30 points or higher wins.</li>
+                        <li>the first player to get 30 points or higher wins !!</li>
                     </ul>
-                    <button class="close">Close</button>
+                    <button class="close">close</button>
                 </article>
             </section>
 
-            <section id="pig2-container">
-               <img src="images/hj.jpeg" alt="Pig 2" class="pig-image">
-                <h2>PLAYER2</h2>
-                <h2 id="pig2-score">Score:</h2>
+            <section class="player-container" id="pig2-container">
+                <section class="score">
+                    <h2>PLAYER 2</h2>
+                    <h2 id="pig2-score">score:</h2>
+                </section>
+                <img src="images/mg.png" alt="Pig 2" class="pig-image" id="mg">
+                
             </section>
         </main>
 
         <section id="game-control2">
             <button id="quit"><a href="#" class="open" id="two">Quit</a></button>
-            <a href="#" class="open" id="three">Rules</a>
+            <a href="#" class="open" id="three">rules</a>
         </section>
 
         <!-- overlay for quit -->
         <section id="ol-two" class="overlay hidden">
             <article>
-                <h2>Are you sure you want to quit?</h2>
+                <h2>are you sure you want to quit?</h2>
                 <div id="btn-container">
-                    <button id="quit-yes">Yes</button>
-                    <button class="close">No</button>
+                    <button id="quit-yes">yep</button>
+                    <button class="close">naur !!</button>
                 </div>
             </article>
         </section>
@@ -88,25 +92,23 @@
         <!-- overlay for rules again -->
         <section id="ol-three" class="overlay hidden">
             <article>
-                <h2>Game Rules:</h2>
+                <h2>game rules:</h2>
                 <ul>
-                    <li>There are two players.</li>
-                    <li>The player whose turn it is rolls the dice.</li>
-                    <li>
-                        The total of the roll is added to the current player's score, unless either die comes up as
-                        a "pig". If this happens, this player's turn is over, and it is the other player’s turn.
+                    <li>there are two players.</li>
+                    <li>a player will roll the dice.</li>
+                    <li>the total of the roll is added to the current player's score. 
+                        if a skull is rolled this player's turn is over, and it will switch to the other player.
                     </li>
                     <li>
-                        If a player rolls two "pigs", that player's current score gets zeroed out, and
-                        they have to start over, accumulating points from zero.
+                        if a player rolls two skulls, their current score gets zeroed out and will have to start from zero.
                     </li>
                     <li>
-                        After each roll, the current player can either roll again, (assuming a "pig" was not rolled)
-                        or if the current player feels that luck is running thin, they can pass to the other player.
+                        after each successful roll, the current player can either roll again
+                        or pass the turn to the other player.
                     </li>
-                    <li>The first player to get 30 points or higher wins.</li>
+                    <li>the first player to get 30 points or higher wins !!</li>
                 </ul>
-                <button class="close">Close</button>
+                <button class="close">close</button>
             </article>
         </section>
     </div>
@@ -114,8 +116,6 @@
     <footer>
         <nav>
             <a href="sources.html">Sources</a>
-            <a href="https://validator.w3.org/check?uri=https://alyssamarie0107.github.io/des157/studio3">Valid HTML5</a>
-            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyssamarie0107.github.io/des157/studio3/%2F">Valid CSS</a>
         </nav>
     </footer>
 </body>

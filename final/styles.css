@@ -108,6 +108,15 @@ p {
     height: 600px;
  }
  
+ .container .card:hover {
+   width: 800px;
+   height: 600px;
+}
+
+#report .card:hover {
+   width: 800px;
+   height: 1050px;
+}
  
  .container .card .imgBx {
     position: absolute;

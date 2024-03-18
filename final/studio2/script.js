@@ -58,6 +58,16 @@
         
         
         document.querySelectorAll('.polaroid').forEach(function(polaroid, index) {
+            polaroid.addEventListener('mouseover', function () {
+                isHovered = true;
+                moveImageToSection(index + 1); // Adjust to match section indices
+            });
+    
+            polaroid.addEventListener('mouseout', function () {
+                isHovered = false;
+                resetImage();
+            });
+            
             polaroid.addEventListener('click', function() {
                 const gifSrc = polaroid.dataset.gif; // Get the GIF filename from the data-gif attribute
                 const imgSrc = polaroid.querySelector('.imgBx img').src; // Get the original image source

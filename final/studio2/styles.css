@@ -251,78 +251,9 @@ button {
     right: 20px;
 }
 
-#introoverlay {
-    display: block; /* Ensure it's initially visible */
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-	top: 0;
-	left: 0;
-	border-radius: 20px;
-    box-sizing: border-box;
-    border: 10px solid #a47426;
-    padding: 20px;
-    background-color: #000000;
-    z-index: 10000;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#introoverlay.active {
-    display: block; /* Hide when not active */
-
-}
-
-#introoverlay.hidden {
-    display: none; /* Hide when not active */
-}
-
-#introoverlay h1 {
-	padding: 20px;
-	font-size: 70px;
-}
-
-#introoverlay h2 {
-	font-size: 20px;
-	color: rgb(212, 206, 206);
-	padding: 30px;
-}
-
-#introoverlay article {
+.sources {
+	color: #f7c303;
+	font-family: "Archivo", sans-serif;
 	position: absolute;
-    top: 40%;
-    left: 0; 
-    transform: translateY(-50%);
-    padding: 20px;
-    border-radius: 10px;
-	width: 850px;
-    height: 600px;
-	display: flex;
-	flex-direction: column;
 	text-align: left;
-	align-items: flex-start;
-	margin-left: 25px;
-	color: black;
-	z-index: 10000;
-}
-
-.introbtn {
-    width: 300px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    color: black;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-family: "Archivo Black", sans-serif;
-    border: 3px solid #FFFFFF;
-    background-color: #f7c303;
-    position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-}
+  }

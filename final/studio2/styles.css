@@ -41,7 +41,7 @@ section {
 }
 h1 {
 	font-family: "Archivo Black", sans-serif;
-	font-size: 32px;
+	font-size: 40px;
 	color: rgb(247, 195, 5);
 }
 header h2 {
@@ -50,6 +50,7 @@ header h2 {
 h2 {
 	font-family: "Archivo Black", sans-serif;
 	font-size: 20px;
+px;
 }
 
 h3 {
